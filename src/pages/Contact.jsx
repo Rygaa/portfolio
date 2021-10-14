@@ -2,7 +2,7 @@ import ContactConsole from "../componenets/ContactConsole";
 import classes from "./Contact.module.scss"
 
 
-const Contact = () => {
+const Contact = (props) => {
     
     return (
         <section className={classes['contact']}>

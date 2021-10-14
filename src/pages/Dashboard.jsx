@@ -2,7 +2,7 @@ import classes from "./Dashboard.module.scss"
 import logo from '../ressources/logo.png'
 import DashboardConsole from "../componenets/DashboardConsole";
 import handWaving from "../ressources/hand-waving.png"
-const Dashboard = () => {
+const Dashboard = (props) => {
     return (
         <section className={classes['dashboard']}>
             <div>

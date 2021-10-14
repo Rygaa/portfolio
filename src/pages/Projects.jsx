@@ -3,7 +3,7 @@ import hanasu from '../ressources/Hanasu.png'
 import ProjectsConsole from "../componenets/ProjectsConsole";
 
 
-const Projects = () => {
+const Projects = (props) => {
     return (
         <section className={classes['projects']}>
             <div>
