@@ -1,5 +1,5 @@
 import { useEffect } from "react"
-import { useState } from "react/cjs/react.development"
+import { useState } from "react"
 import classes from "./Console.module.scss"
 import Output from "./Output"
 
