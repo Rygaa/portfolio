@@ -1,0 +1,143 @@
+.dashboard {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 2fr 10fr 2fr;
+      grid-template-rows: 2fr 10fr 2fr;
+  max-height: 450px;
+  margin-right: 15%;
+  margin-left: 15%;
+  margin-top: 5%;
+}
+
+.dashboard > div:nth-child(1) {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1 / 2;
+  height: 55%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  color: white;
+}
+
+.dashboard > div:nth-child(1) > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.dashboard > div:nth-child(1) > div p {
+  margin: 0;
+  padding: 0;
+  margin-left: 10px;
+}
+
+.dashboard > div:nth-child(1) > div > p:nth-child(1) {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  color: #FFFFFF;
+}
+
+.dashboard > div:nth-child(1) > div > p:nth-child(2) {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 35px;
+  letter-spacing: 0.1em;
+  color: #FFFFFF;
+}
+
+.dashboard > div:nth-child(2) {
+  color: white;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2 / 3;
+}
+
+.dashboard > div:nth-child(2) p {
+  margin: 0;
+  padding: 0;
+}
+
+.dashboard > div:nth-child(2) > p:nth-child(1) {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  color: #FFFFFF;
+}
+
+.dashboard > div:nth-child(2) > p:nth-child(2) {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 35px;
+  letter-spacing: 0.1em;
+  color: #FFFFFF;
+}
+
+.dashboard > div:nth-child(2) > p:nth-child(3), .dashboard > div:nth-child(2) > p:nth-child(5) {
+  margin-top: 20px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  letter-spacing: 0.075em;
+  color: rgba(255, 255, 255, 0.869);
+}
+
+.dashboard > div:nth-child(2) ul li {
+  list-style: none;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  letter-spacing: 0.075em;
+  color: rgba(255, 255, 255, 0.869);
+}
+
+.dashboard > button:nth-child(3) {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3 / 4;
+  height: 100%;
+  width: 50%;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  border: none;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 5px;
+  margin-bottom: 10%;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  letter-spacing: 0.075em;
+  color: rgba(255, 255, 255, 0.869);
+}
+/*# sourceMappingURL=Dashboard.module.css.map */

@@ -1,0 +1,32 @@
+.Output {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-top: 1%;
+  color: #24FF00;
+}
+
+.arrow {
+  margin-left: 20px;
+  margin-right: 10px;
+  font-family: Lucida Console;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10px;
+  letter-spacing: 0.075em;
+  color: #24FF00;
+}
+
+.text {
+  font-family: Lucida Console;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10px;
+  letter-spacing: 0.075em;
+  color: #24FF00;
+}
+/*# sourceMappingURL=Output.module.css.map */

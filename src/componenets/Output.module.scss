@@ -1,0 +1,34 @@
+@import '../ressources/font.module';
+
+
+.Output {
+    display: flex;
+    flex-direction: row;
+    margin-top: 1%;
+    color: #24FF00;
+}
+
+.arrow {
+    margin: 0;
+    padding: 0;
+    margin-left: 20px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    @include lucudiaConsole-normal-normal-13px-green;
+ 
+}
+
+.text {
+    @include lucudiaConsole-normal-normal-13px-green;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    margin-bottom: 5px;
+    resize: none;
+}
+
+.text:focus {
+    outline: none;
+}

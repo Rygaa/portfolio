@@ -1,0 +1,92 @@
+@import '../ressources/font.module';
+
+
+
+.projects {
+    margin-top: 10%;
+    display: grid;
+    grid-template-columns: 16fr minmax(0, 1fr) 20fr;
+    grid-template-rows: 1fr 10fr;
+    height: 800px;
+    // margin-left: 10%;
+    // margin-right: 10%;
+}
+
+.projects > div:nth-child(1) {
+    grid-column: 1 / 4;
+    grid-row: 1 / 2;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
+
+.projects > div:nth-child(1) > p:nth-child(1) {
+    @include lucudiaConsole-normal-normal-13px-green;
+    color: white;
+    font-size: 40px;
+    margin: 0;
+}
+
+.projects > div:nth-child(1) > p:nth-child(2) {
+    @include lucudiaConsole-normal-normal-13px-green;
+    color: white;
+    font-size: 20px;
+    margin-top: 1.5%;
+}
+
+.projects > div:nth-child(3) {
+    margin: 0;
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+    align-self: center;
+    height: 80%;
+    width: 1px;
+    background-color:rgba(255, 255, 255, 0.29);
+    margin-left: 5px;
+}
+
+.projects > img:nth-child(4) {
+    grid-row: 2 / 3;
+    grid-column: 3 / 4;
+    width: 90%;
+    object-fit: contain;
+    align-self: center;
+    justify-self: left;
+}
+
+
+@media (max-width: 1000px){
+    .projects {
+        margin-top: 12%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 10fr 1fr 10fr;
+        height: 650px;
+        // margin-left: 10%;
+        // margin-right: 10%;
+    }
+
+    .projects > div:nth-child(3) {
+        margin: 0;
+        grid-row: 3 / 4;
+        grid-column: 1 / 2;
+        justify-self: center;
+        align-self: center;
+        height: 1px;
+        width: 90%;
+        background-color:rgba(255, 255, 255, 0.29);
+        margin-left: 5px;
+    }
+
+    .projects > img:nth-child(4) {
+        grid-row: 2 / 3;
+        grid-column: 1 / 2;
+        width: 90%;
+        object-fit: contain;
+        align-self: center;
+        justify-self: center;
+    }
+
+}
+

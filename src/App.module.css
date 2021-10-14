@@ -1,0 +1,10 @@
+body {
+  background-color: black;
+}
+
+/* Rectangle 13 */
+.css-selector {
+  background: -webkit-gradient(linear, right top, left top, from(rgba(0, 209, 255, 0.15)), color-stop(55.42%, rgba(0, 85, 251, 0.15)));
+  background: linear-gradient(270deg, rgba(0, 209, 255, 0.15) 0%, rgba(0, 85, 251, 0.15) 55.42%);
+}
+/*# sourceMappingURL=App.module.css.map */

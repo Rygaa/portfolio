@@ -1,0 +1,35 @@
+@mixin roboto-normal-bold-20px-white {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 0.1em;
+    color: #FFFFFF;
+}
+
+@mixin roboto-normal-bold-50px-white {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 50px;
+    letter-spacing: 0.1em;
+    color: #FFFFFF;
+}
+
+@mixin roboto-normal-500-20px-white {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    letter-spacing: 0.075em;
+    color: rgba(255, 255, 255, 0.869);
+}
+
+@mixin lucudiaConsole-normal-normal-13px-green {
+    font-family: Lucida Console;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    letter-spacing: 0.075em;
+    color: #24FF00;
+}

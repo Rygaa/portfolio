@@ -1,0 +1,35 @@
+.contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contact > p:nth-child(1) {
+  font-family: Lucida Console;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10px;
+  letter-spacing: 0.075em;
+  color: #24FF00;
+  color: white;
+  font-size: 25px;
+}
+
+.contact > p:nth-child(2) {
+  font-family: Lucida Console;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10px;
+  letter-spacing: 0.075em;
+  color: #24FF00;
+  color: white;
+  font-size: 15px;
+}
+/*# sourceMappingURL=Contact.module.css.map */

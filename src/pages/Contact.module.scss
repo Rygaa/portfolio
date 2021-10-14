@@ -1,0 +1,40 @@
+@import '../ressources/font.module';
+
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10%;
+}
+
+.contact > p:nth-child(1) {
+    @include lucudiaConsole-normal-normal-13px-green;
+    color: white;
+    font-size: 40px;
+    margin-bottom: .5%;
+}
+
+.contact > p:nth-child(2) {
+    @include lucudiaConsole-normal-normal-13px-green;
+    color: white;
+    font-size: 20px;
+    margin-bottom: 4%;
+}
+
+
+@media (max-width: 1000px){
+    .contact {
+        margin-top: 20%;
+    }
+
+    .contact > p:nth-child(1) {
+        margin-bottom: .5%;
+    }
+
+    .contact > p:nth-child(2) {
+        margin-bottom: 4%;
+    }
+
+}
+
