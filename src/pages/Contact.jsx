@@ -1,17 +1,28 @@
-import ContactConsole from "../componenets/ContactConsole";
+import ContactConsole from "../componenets/Consoles/ContactConsole";
 import classes from "./Contact.module.scss"
-
+import { pagesActions } from "../store/pages-slice";
+import { useDispatch } from "react-redux";
+import { useEffect, useRef } from "react";
 
 const Contact = (props) => {
-    
+    const dispatch = useDispatch();
+    const myRef = useRef();
+    useEffect(() => {
+        dispatch(pagesActions.setContactRef(myRef.current));
+    }, [myRef])
+    const cmd = [
+        'Enter your email: ',
+        'Enter your name:',
+        'Enter your message',
+    ]
     return (
-        <section className={classes['contact']}>
+        <section ref={myRef} className={classes['contact']}>
             <p>Contact us</p>
             <p>{'>'} Use the console to send an email</p>
             <ContactConsole
-                cmd={['Enter your email: ', 'Enter your name: ', 'Enter your message: ']} 
+                cmd={cmd}
+                // cmd={['Enter your email: ', 'Enter your name: ', 'Enter your message: ']} 
                 status="contact"
-                focus={false}
                 >
             </ContactConsole>
         </section>

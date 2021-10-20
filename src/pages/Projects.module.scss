@@ -6,10 +6,7 @@
     margin-top: 10%;
     display: grid;
     grid-template-columns: 16fr minmax(0, 1fr) 20fr;
-    grid-template-rows: 1fr 10fr;
-    height: 800px;
-    // margin-left: 10%;
-    // margin-right: 10%;
+    grid-template-rows: 1fr 6fr;
 }
 
 .projects > div:nth-child(1) {
@@ -24,14 +21,14 @@
 .projects > div:nth-child(1) > p:nth-child(1) {
     @include lucudiaConsole-normal-normal-13px-green;
     color: white;
-    font-size: 40px;
+    font-size: 2.5rem;
     margin: 0;
 }
 
 .projects > div:nth-child(1) > p:nth-child(2) {
     @include lucudiaConsole-normal-normal-13px-green;
     color: white;
-    font-size: 20px;
+    font-size: 1.25rem;
     margin-top: 1.5%;
 }
 
@@ -58,14 +55,47 @@
 
 @media (max-width: 1000px){
     .projects {
-        margin-top: 12%;
-        display: grid;
+        margin-top: 20%;
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 10fr 1fr 10fr;
-        height: 650px;
+        grid-template-rows: 2fr 8fr 1fr 8fr;
+        height: unset;
         // margin-left: 10%;
         // margin-right: 10%;
     }
+
+    .projects > div:nth-child(3) {
+        margin: 0;
+        grid-row: 3 / 4;
+        grid-column: 1 / 2;
+        justify-self: center;
+        height: 1px;
+        width: 40%;
+    }
+
+    .projects > img:nth-child(4) {
+        grid-row: 2 / 3;
+        grid-column: 1 / 2;
+        width: 70%;
+        object-fit: contain;
+        align-self: center;
+        justify-self: center;
+    }
+
+}
+
+
+@media (max-width: 480px){
+    .projects {
+        margin-top: 35%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 4fr 12fr 1fr 16fr;
+        max-height: unset;
+        height: unset;
+        // margin-left: 10%;
+        // margin-right: 10%;
+    }
+
 
     .projects > div:nth-child(3) {
         margin: 0;
@@ -80,12 +110,18 @@
     }
 
     .projects > img:nth-child(4) {
+        margin-top: 5%;
         grid-row: 2 / 3;
         grid-column: 1 / 2;
-        width: 90%;
         object-fit: contain;
         align-self: center;
         justify-self: center;
+    }
+    .projects > img:nth-child(4) {
+        margin-top: 10%;
+        width: 80%;
+        object-fit: contain;
+        align-self: flex-start;
     }
 
 }

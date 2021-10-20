@@ -5,8 +5,13 @@ import classes from "./App.module.scss"
 import Dashboard from './pages/Dashboard';
 import Projects from './pages/Projects';
 import Contact from './pages/Contact';
+import { useRef } from 'react';
 
 function App() {
+  const dashboardRef = useRef(null)
+  const projectsRef = useRef(null)
+  const contactRef = useRef(null)
+
   return (
     <div className={classes['css-selector']}>
       <Header></Header>

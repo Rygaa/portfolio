@@ -3,8 +3,7 @@
 .dashboard {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: minmax(0, 4fr) 20fr 7fr;
-    max-height: 800px;
+    grid-template-rows: 1fr 5fr 2fr;
     margin-right: 15%;
     margin-left: 15%;
     margin-top: 7%;
@@ -19,7 +18,7 @@
 }
 
 .dashboard > div:nth-child(1) > img {
-    height: 100%;
+    max-height: 80px;
 }
 
 .dashboard > div:nth-child(1) > div {
@@ -70,14 +69,38 @@
 
 
 @media (max-width: 1000px){
+    html {
+        font-size: 14px;
+    }
+    .dashboard > div:nth-child(1) > img {
+        max-height: 65px;
+    }   
     .dashboard {
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: minmax(0, 2fr) minmax(0, 6fr) 5fr;
-        max-height: 850px;
+        grid-template-rows: 1fr 4fr 5fr;
         margin-right: 15%;
         margin-left: 15%;
         margin-top: 10%; //Updated
+    }
+
+    .dashboard > button:nth-child(3) {
+        display: none;
+    }
+
+}
+
+@media (max-width: 480px){
+    .dashboard > div:nth-child(1) > img {
+        max-height: 55px;
+    }
+    html {
+        font-size: 11px;
+    }
+    .dashboard {
+        // grid-template-rows: 6% 34% 40%;
+        grid-template-rows: 1fr 4fr 4fr;
+        max-height: 750px;
     }
 
     .dashboard > button:nth-child(3) {

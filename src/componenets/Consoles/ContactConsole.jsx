@@ -1,7 +1,7 @@
 import { useEffect } from "react"
 import { useState } from "react"
-import classes from "./Console.module.scss"
-import Output from "./Output"
+import classes from "./ContactConsole.module.scss"
+import Output from "../Output"
 
 
 const ContactConsole = (props) => {
@@ -29,7 +29,7 @@ const ContactConsole = (props) => {
   
     const createNewInput = (focus) => {
         setOutputs(outputs => {
-            return [
+            return props.cmd.length > 0 ? [
                 ...outputs,
                 {
                     key: Math.random(),
@@ -37,17 +37,19 @@ const ContactConsole = (props) => {
                     txt: props.cmd.length > 0 ? props.cmd.splice(0, 1)[0] : '',
                     focus: focus ? focus : props.focus,
                     readCommand: readCommand,
+                    readOnlyCommand: false
+                    
                 }
-            ]
+            ] : [...outputs]
         })
     }
-    
+    useEffect(() => {
+    }, outputs)
 
     useEffect(() => {
-        createNewInput();
+        createNewInput(false);
     }, [])
     useEffect(() => {
-        console.log(message);
     }, [message])
 
     const outputsList = outputs.map((output) => (
@@ -57,6 +59,8 @@ const ContactConsole = (props) => {
             txt={output.txt}
             focus={output.focus}
             readCommand={readCommand}
+            readOnlyCommand={output.readOnlyCommand}
+
         />
     ));
 
@@ -76,9 +80,9 @@ const ContactConsole = (props) => {
             </div>
             <form className={classes['send-form']}  id="contactform" action="https://formsubmit.io/send/0c3f15b7-499e-45dd-a589-03995b63d04d" method="POST">
                 <input name="_redirect" type="hidden" value="https://www.nasykh.com/" />
-                <input name="name" hidden style={{display:"none"}} type="text" id="name" value={name}/>
-                <input name="email" hidden style={{ display: "none" }} type="email" id="email" value={email}/>
-                <textarea name="comment" id="comment" rows="3" value={message} hidden/>
+                <input name="name" hidden style={{display:"none"}} type="text" id="name" value={name} readOnly/>
+                <input name="email" hidden style={{ display: "none" }} type="email" id="email" value={email} readOnly/>
+                <textarea name="comment" id="comment" rows="3" value={message} hidden readOnly/>
                 <input name="_formsubmit_id" type="text" hidden style={{display:"none"}} />
                 <input value="Submit" type="submit" />
             </form>
