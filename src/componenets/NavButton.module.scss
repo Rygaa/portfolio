@@ -1,0 +1,28 @@
+.div-nav-button-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-right: 2.5%;
+    margin-left: 2.5%;
+}
+
+.div-nav-button-container img {
+    width: 45px;
+    height: 45px;
+    margin-right: 2.5%;
+}
+
+.div-nav-button-container button {
+    height: 64px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    letter-spacing: 0.075em;
+
+    color: #FFFFFF;
+    background-color: transparent;
+    border: none;
+
+}

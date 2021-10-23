@@ -12,8 +12,8 @@ const Contact = (props) => {
     }, [myRef])
     const cmd = [
         'Enter your email: ',
-        'Enter your name:',
-        'Enter your message',
+        'Enter your name: ',
+        'Enter your message: ',
     ]
     return (
         <section ref={myRef} className={classes['contact']}>

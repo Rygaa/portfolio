@@ -1,0 +1,143 @@
+.console-contact {
+  background: rgba(196, 196, 196, 0.1);
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin-left: 2%;
+  margin-bottom: 5%;
+  width: 45%;
+  justify-self: right;
+  -ms-flex-item-align: center;
+      align-self: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.top-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.top-buttons > div {
+  border-radius: 50%;
+  border: none;
+  width: 15px;
+  height: 15px;
+  margin-left: 15px;
+}
+
+.top-buttons > div:nth-child(1) {
+  background-color: red;
+}
+
+.top-buttons > div:nth-child(2) {
+  background-color: yellow;
+}
+
+.top-buttons > div:nth-child(3) {
+  background-color: green;
+}
+
+.line {
+  height: 1.5px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.04);
+  margin-bottom: 3%;
+}
+
+.commands-container {
+  overflow-y: scroll;
+  height: 60%;
+  min-height: 500px;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.send-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.send-form > input:nth-child(6) {
+  background-color: transparent;
+  border: none;
+  display: block;
+  font-family: Lucida Console;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 0.9375rem;
+  letter-spacing: 0.075em;
+  color: #24FF00;
+  background: rgba(0, 0, 0, 0.24);
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  height: 40px;
+  width: 150px;
+  justify-self: flex-end;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin-bottom: 1%;
+  margin-right: 1%;
+}
+
+@media (max-width: 1000px) {
+  .commands-container {
+    overflow-y: scroll;
+    height: 60%;
+    min-height: 250px;
+  }
+  .console-contact {
+    margin-left: 0%;
+    margin-top: 7%;
+    width: 75%;
+    margin-bottom: 50%;
+  }
+}
+
+@media (max-width: 480px) {
+  .commands-container {
+    overflow-y: scroll;
+    height: 60%;
+    min-height: 150px;
+  }
+  .console-contact {
+    background: rgba(196, 196, 196, 0.1);
+    -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin-left: 0%;
+    margin-bottom: 10%;
+    margin-top: 7%;
+    -ms-grid-column-align: right;
+        justify-self: right;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    height: unset;
+    margin-bottom: 350px;
+  }
+  .send-form > input:nth-child(6) {
+    height: 2.5em;
+    width: 9.3rem;
+    justify-self: flex-end;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+    margin-bottom: 3%;
+    margin-right: 3%;
+  }
+}
+/*# sourceMappingURL=ContactConsole.module.css.map */

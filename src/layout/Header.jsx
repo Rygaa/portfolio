@@ -5,7 +5,7 @@ import logo from '../ressources/logo.png'
 const Header = (props) => {
     return (
         <header className={classes['header']}>
-            <img src={logo}></img>
+            <img src={logo} className={classes['logo']}></img>
             <Nav></Nav>
         </header>
     );

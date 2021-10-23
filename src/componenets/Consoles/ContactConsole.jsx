@@ -27,27 +27,49 @@ const ContactConsole = (props) => {
         }
     }
   
-    const createNewInput = (focus) => {
+    const generateInputFromCMD = (readOnly, focus) => {
+        const length = props.cmd.length;
+        const text = length > 0 ? props.cmd.splice(0, 1)[0] : '';
         setOutputs(outputs => {
-            return props.cmd.length > 0 ? [
+            return length > 0 ? [
                 ...outputs,
                 {
                     key: Math.random(),
-                    createNewInput: createNewInput,
-                    txt: props.cmd.length > 0 ? props.cmd.splice(0, 1)[0] : '',
-                    focus: focus ? focus : props.focus,
+                    generateInputFromCMD: generateInputFromCMD,
+                    generateInputFromARG: generateInputFromARG,
+                    txt: text,
+                    focus,
                     readCommand: readCommand,
-                    readOnlyCommand: false
-                    
+                    readOnlyCommand: readOnly
                 }
             ] : [...outputs]
         })
     }
+    const generateInputFromARG = (readOnly, focus, text) => {
+        setOutputs(outputs => {
+            return [
+                ...outputs,
+                {
+                    key: Math.random(),
+                    generateInputFromCMD: generateInputFromCMD,
+                    generateInputFromARG: generateInputFromARG,
+                    txt: text,
+                    focus: focus ? focus : props.focus,
+                    readCommand: readCommand,
+                    readOnlyCommand: readOnly
+
+                }
+            ]
+        })
+    }
+
+  
     useEffect(() => {
     }, outputs)
 
     useEffect(() => {
-        createNewInput(false);
+        generateInputFromCMD(false, false)
+
     }, [])
     useEffect(() => {
     }, [message])
@@ -55,7 +77,8 @@ const ContactConsole = (props) => {
     const outputsList = outputs.map((output) => (
         <Output
             key={output.key}
-            createNewInput={output.createNewInput}
+            generateInputFromCMD = {generateInputFromCMD}
+            generateInputFromARG = {generateInputFromARG}
             txt={output.txt}
             focus={output.focus}
             readCommand={readCommand}

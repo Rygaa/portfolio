@@ -11,12 +11,15 @@
 }
 
 .arrow {
+  margin: 0;
+  padding: 0;
   margin-left: 20px;
   margin-right: 10px;
+  margin-bottom: 5px;
   font-family: Lucida Console;
   font-style: normal;
   font-weight: normal;
-  font-size: 10px;
+  font-size: 0.9375rem;
   letter-spacing: 0.075em;
   color: #24FF00;
 }
@@ -25,8 +28,19 @@
   font-family: Lucida Console;
   font-style: normal;
   font-weight: normal;
-  font-size: 10px;
+  font-size: 0.9375rem;
   letter-spacing: 0.075em;
   color: #24FF00;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  width: 100%;
+  margin-bottom: 5px;
+  resize: none;
+}
+
+.text:focus {
+  outline: none;
 }
 /*# sourceMappingURL=Output.module.css.map */

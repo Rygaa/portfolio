@@ -3,10 +3,10 @@
 .dashboard {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 5fr 2fr;
+    grid-template-rows: 1fr 5fr 1fr;
     margin-right: 15%;
     margin-left: 15%;
-    margin-top: 7%;
+    margin-top: 5%;
 }
 
 .dashboard > div:nth-child(1) {
@@ -15,6 +15,7 @@
     grid-column: 1 / 2;
     grid-row: 1 / 2;
     color: white;
+    
 }
 
 .dashboard > div:nth-child(1) > img {
@@ -37,7 +38,9 @@
     color: white;
     grid-column: 1 / 2;
     grid-row: 2 / 3;
-    margin-top: 6%;
+    margin-top: 5%;
+
+    // margin-top: 6%;
     p {
         margin: 0;
         padding: 0;
@@ -57,7 +60,7 @@
 .dashboard > button:nth-child(3) {
     grid-column: 1 / 2;
     grid-row: 3 / 4;
-    height: 60%;
+    height: 100%;
     width: 50%;
     align-self: flex-start;
     justify-self: center;
@@ -67,6 +70,11 @@
     @include roboto-normal-500-20px-white;
 }
 
+@media (max-width: 1300px) {
+    .dashboard {
+        margin-right: 0%;
+    }
+}
 
 @media (max-width: 1000px){
     html {
@@ -81,7 +89,7 @@
         grid-template-rows: 1fr 4fr 5fr;
         margin-right: 15%;
         margin-left: 15%;
-        margin-top: 10%; //Updated
+        padding-top: 40%; //Updated
     }
 
     .dashboard > button:nth-child(3) {
@@ -91,8 +99,14 @@
 }
 
 @media (max-width: 480px){
+    .dashboard { 
+        margin-top: 1%;
+        padding-top: 20%; //Updated
+
+    }
     .dashboard > div:nth-child(1) > img {
         max-height: 55px;
+
     }
     html {
         font-size: 11px;

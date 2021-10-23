@@ -5,7 +5,7 @@ import Output from "../Output"
 
 const DashboardConsole = (props) => {
     
-    const [outputs, setOuputs] = useState([])
+    const [outputs, setOutputs] = useState([])
     const filterClassName = () => {
         switch (props.status) {
             case 'projects':
@@ -18,31 +18,25 @@ const DashboardConsole = (props) => {
     }
 
 
-    const runNextLine = () => {
-        createNewInput();
-
-    }
-
-    const createNewInput = () => {
-        if (props.cmd.length == 0) {
-            // setArr(arr => [...arr])
-        } else {
-            setOuputs(outputs => {
-                const x = props.cmd.splice(0, 1);
-                return [...outputs,{
+    const generateInputFromCMD = (readOnly, focus) => {
+        const length = props.cmd.length;
+        const text = length > 0 ? props.cmd.splice(0, 1)[0] : '';
+        setOutputs(outputs => {
+            return length > 0 ? [
+                ...outputs,
+                {
                     key: Math.random(),
-                    createNewInput: createNewInput,
-                    txt: x[0],
-                    focus: props.focus,
-                    runNextLine: runNextLine,
-                    readOnlyCommand: true
-                }]
-            });
-        }
+                    generateInputFromCMD: generateInputFromCMD,
+                    txt: text,
+                    focus,
+                    readOnlyCommand: readOnly
+                }
+            ] : [...outputs]
+        })
     }
 
     useEffect(() => {
-        createNewInput();
+        generateInputFromCMD(true, false);
     }, [])
 
     useEffect(() => {
@@ -55,8 +49,7 @@ const DashboardConsole = (props) => {
             createNewInput={output.createNewInput}
             txt={output.txt}
             focus={output.focus}
-            // readCommand={readCommand}
-            runNextLine={runNextLine}
+            generateInputFromCMD={output.generateInputFromCMD}
             readOnlyCommand={output.readOnlyCommand}
         />
     ));

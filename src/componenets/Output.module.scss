@@ -4,6 +4,7 @@
 .Output {
     display: flex;
     flex-direction: row;
+    align-items: flex-start;
     margin-top: 1%;
     color: #24FF00;
 }
@@ -24,11 +25,20 @@
     padding: 0;
     background-color: transparent;
     border: none;
-    width: 100%;
+    width: 80%;
     margin-bottom: 5px;
     resize: none;
 }
 
 .text:focus {
     outline: none;
+}
+
+
+button {
+    height: 50%;
+    @include lucudiaConsole-normal-normal-13px-green;
+    background-color: transparent;
+    border: none;
+    font-size: 5px;
 }
