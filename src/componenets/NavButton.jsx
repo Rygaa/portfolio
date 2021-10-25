@@ -4,9 +4,12 @@ import classes from "./NavButton.module.scss"
 
 
 const NavButton = (props) => {
-
+  const dashboardRef = useSelector((state) => state.pages.dashboardRef)
   const buttonOnClick = (e) => {
     props.pageRef.scrollIntoView()
+    if (props.pageRef == dashboardRef) {
+      window.scrollTo(0, 0);
+    }
   }
 
   return(

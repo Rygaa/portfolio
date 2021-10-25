@@ -4,10 +4,18 @@ import DashboardConsole from "../componenets/Consoles/DashboardConsole";
 import handWaving from "../ressources/hand-waving.png"
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useRef } from "react";
+import NavButton from "../componenets/NavButton";
+import navIMG from '../ressources/nav.png'
+import navRemoveIMG from '../ressources/nav-remove.png'
+import moreIMG from '../ressources/more.png'
+import contactIMG from '../ressources/contact.png'
+import projectsIMG from '../ressources/projects.png'
 import pagesSlice, { pagesActions } from "../store/pages-slice";
 const Dashboard = (props) => {
     const dispatch = useDispatch();
     const myRef = useRef();
+    const projectsRef = useSelector((state) => state.pages.projectsRef)
+
     useEffect(() => {
         dispatch(pagesActions.setDashboardRef(myRef.current));
     }, [myRef])
@@ -18,6 +26,9 @@ const Dashboard = (props) => {
         'Nas',
         'Flaticon',
     ]
+    const buttonOnClick = (e) => {
+        projectsRef.scrollIntoView()
+    }
     return (
         <section ref={myRef} className={classes['dashboard']}>
             <div>
@@ -30,7 +41,7 @@ const Dashboard = (props) => {
             <div>
                 <p>And this is</p>
                 <p>My portfolio</p>
-                <p>i am passionate about computer science universe <br></br> especialy about softwere enginer bubble and has been in it <br></br> for more than 2 years.</p>
+                <p>I am passionate about computer science universe, <br></br> especially about software engine bubbles and has been in it <br></br> for more than 2 years.</p>
                 <ul>
                     <li>React.js</li>
                     <li>Node.js</li>
@@ -38,7 +49,10 @@ const Dashboard = (props) => {
                 </ul>
                 <p>challenges are never a burden for me.In fact, I am always <br></br> ready to accept new one</p>
             </div>
-            <button>View Project</button>
+            <div className={classes['div-nav-button-container']} onClick={buttonOnClick}>
+                <img src={projectsIMG} />
+                <button>View projects</button>
+            </div>
             <DashboardConsole cmd={cmd} status='dashboard'></DashboardConsole>
         </section>
     );

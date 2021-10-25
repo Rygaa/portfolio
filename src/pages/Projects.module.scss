@@ -3,7 +3,7 @@
 
 
 .projects {
-    margin-top: 10%;
+    padding-top: 5%;
     display: grid;
     grid-template-columns: 16fr minmax(0, 1fr) 20fr;
     grid-template-rows: 1fr 6fr;
@@ -52,10 +52,16 @@
     justify-self: left;
 }
 
+@media (max-width: 1300px) {
+    .projects {
+        margin-top: 10%;
+    }
 
+}
 @media (max-width: 1000px){
     .projects {
         margin-top: 20%;
+        
         grid-template-columns: 1fr;
         grid-template-rows: 2fr 8fr 1fr 8fr;
         height: unset;

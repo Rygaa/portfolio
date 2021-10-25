@@ -36,9 +36,12 @@
 
 
 button {
-    height: 50%;
     @include lucudiaConsole-normal-normal-13px-green;
     background-color: transparent;
     border: none;
-    font-size: 5px;
+    font-size: 8px;
+    padding: .3rem 1rem;
+    // max-height: 10%;
+    background-color: rgba(1, 1, 1, 0.3);
+    margin-right: 5%;
 }

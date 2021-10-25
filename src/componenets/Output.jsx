@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import classes from "./Output.module.scss"
 import { useTimer } from 'react-timer-hook';
 import { useSelector } from "react-redux";
-import * as rdd from 'react-device-detect';
+import { isMobile } from 'react-device-detect';
 import * as EmailValidator from 'email-validator';
 import { ToastProvider, useToasts } from 'react-toast-notifications';
 
@@ -79,7 +79,8 @@ const Output = (props) => {
     //     }
     // }, [isEmailValid])
     const textOnEnter = (event) => {
-        if (event.key === 'Enter') {
+
+        if (event.key === 'Enter' || isMobile) {
             const key = props.txt;
             const value = text.replace(key, '');
             if (key == 'Enter your email: ') {
@@ -133,6 +134,9 @@ const Output = (props) => {
                     // style={{resize:"none"}}
                     // wrap="off"
                 />
+                {(isMobile && !props.readOnlyCommand) && 
+                    <button onClick={textOnEnter}>enter</button>
+                }
             </div>
 
     );
