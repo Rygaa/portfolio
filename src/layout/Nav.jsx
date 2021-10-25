@@ -21,7 +21,7 @@ const Nav = (props) => {
     // <div onClick={openMenu}><img src={navIMG}/></div>
     return (clicked ? <nav className={classes['nav-open']} >
         <div>        
-            <NavButton pageRef={dashboardRef} img={moreIMG} name={'Dashboard'}></NavButton>
+            <NavButton pageRef={dashboardRef} img={moreIMG} name={'Home'}></NavButton>
             <NavButton pageRef={projectsRef} img={projectsIMG} name={'Projects'}></NavButton>
             <NavButton pageRef={contactRef} img={contactIMG} name={'Contact'}></NavButton>
         </div>
