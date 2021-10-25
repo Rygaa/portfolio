@@ -102,7 +102,7 @@ const ContactConsole = (props) => {
             }
             </div>
             <form className={classes['send-form']}  id="contactform" action="https://formsubmit.io/send/0c3f15b7-499e-45dd-a589-03995b63d04d" method="POST">
-                <input name="_redirect" type="hidden" value="https://www.nasykh.com/" />
+                <input name="_redirect" type="hidden" value="https://www.aissaben.com/" onClick={console.log('clicked')} />
                 <input name="name" hidden style={{display:"none"}} type="text" id="name" value={name} readOnly/>
                 <input name="email" hidden style={{ display: "none" }} type="email" id="email" value={email} readOnly/>
                 <textarea name="comment" id="comment" rows="3" value={message} hidden readOnly/>
