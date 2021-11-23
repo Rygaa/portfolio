@@ -1,4 +1,5 @@
-import classes from "./Projects.module.scss"
+import classes from "assets/6-pages/Projects.module.scss"
+
 import hanasu from '../ressources/Hanasu.png'
 import ProjectsConsole from "../componenets/Consoles/ProjectsConsole";
 import { pagesActions } from "../store/pages-slice";

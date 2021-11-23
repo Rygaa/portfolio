@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import classes from "./Nav.module.scss"
+import classes from "assets/4-layouts/Nav.module.scss"
 import NavButton from "../componenets/NavButton";
 import { useSelector } from "react-redux";
 import navIMG from '../ressources/nav.png'

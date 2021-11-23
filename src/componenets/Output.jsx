@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
-import classes from "./Output.module.scss"
+import classes from "assets/5-components/Output.module.scss"
+
 import { useTimer } from 'react-timer-hook';
 import { useSelector } from "react-redux";
 import { isMobile } from 'react-device-detect';

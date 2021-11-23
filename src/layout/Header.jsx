@@ -1,4 +1,4 @@
-import classes from "./Header.module.scss"
+import classes from "assets/4-layouts/Header.module.scss"
 import Nav from "./Nav";
 import logo from '../ressources/logo.png'
 

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
-import classes from "./NavButton.module.scss"
+import classes from "assets/5-components/NavButton.module.scss"
 
 
 const NavButton = (props) => {

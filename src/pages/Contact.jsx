@@ -1,5 +1,5 @@
 import ContactConsole from "../componenets/Consoles/ContactConsole";
-import classes from "./Contact.module.scss"
+import classes from "assets/6-pages/Contact.module.scss"
 import { pagesActions } from "../store/pages-slice";
 import { useDispatch } from "react-redux";
 import { useEffect, useRef } from "react";

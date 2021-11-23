@@ -1,6 +1,6 @@
 import { useEffect } from "react"
 import { useState } from "react"
-import classes from "./ContactConsole.module.scss"
+import classes from "assets/5-components/Consoles/ContactConsole.module.scss"
 import Output from "../Output"
 
 

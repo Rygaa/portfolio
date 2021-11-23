@@ -1,4 +1,5 @@
-import classes from "./Dashboard.module.scss"
+import classes from "assets/6-pages/Dashboard.module.scss"
+
 import logo from '../ressources/logo.png'
 import DashboardConsole from "../componenets/Consoles/DashboardConsole";
 import handWaving from "../ressources/hand-waving.png"

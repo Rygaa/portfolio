@@ -1,6 +1,7 @@
 import { useEffect } from "react"
 import { useState } from "react"
-import classes from "./DashboardConsole.module.scss"
+import classes from "assets/5-components/Consoles/DashboardConsole.module.scss"
+
 import Output from "../Output"
 
 const DashboardConsole = (props) => {
