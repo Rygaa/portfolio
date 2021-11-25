@@ -1,6 +1,7 @@
 import classes from "assets/6-pages/Projects.module.scss"
 
 import hanasu from '../ressources/Hanasu.png'
+import arrow from '../ressources/right-arrow.png'
 import ProjectsConsole from "../componenets/Consoles/ProjectsConsole";
 import { pagesActions } from "../store/pages-slice";
 import { useDispatch } from "react-redux";
@@ -20,13 +21,23 @@ const Projects = (props) => {
     ]
     return (
         <section ref={myRef} className={classes['projects']}>
-            <div>
+            <div className={classes['title-container']}>
                 <p>Projects</p>
                 <p>{'>'} Use the console to switch between projects</p>
             </div>
-            <ProjectsConsole cmd={cmd} status='projects'></ProjectsConsole>
-            <div></div>
-            <img src={hanasu}></img>
+            <div className={classes['project-container']}>
+                <ProjectsConsole cmd={cmd} status='projects'></ProjectsConsole>
+                <div>
+                    <div><img src={hanasu}></img></div>
+                    <div><img src={arrow}></img></div>
+                </div>
+            </div>
+            <div className={classes['projects-switch']}>
+                <button></button>
+                <button></button>
+                <button></button>
+            </div>
+
         </section>
     );
 }

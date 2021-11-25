@@ -19,17 +19,24 @@ function App() {
   const dashboardRef = useRef(null)
   const projectsRef = useRef(null)
   const contactRef = useRef(null)
-
+  let vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty('--vh', `${vh}px`);
+  window.addEventListener('resize', () => {
+    // We execute the same script as before
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+  });
   return (
     <ToastProvider components={{ Toast: MyCustomToast }} autoDismissTimeout={'3000'} placement={'top-left'}>
-      <div className={classes['css-selector']}>
+
+      <section className={classes['css-selector']}>
         <Header></Header>
         <main>
           <Dashboard></Dashboard>
           <Projects></Projects>
           <Contact></Contact>
         </main>
-      </div>
+      </section>
     </ToastProvider>
 
       

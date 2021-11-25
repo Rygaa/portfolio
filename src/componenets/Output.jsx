@@ -134,7 +134,7 @@ const Output = (props) => {
                     // rows={1}
                     // style={{resize:"none"}}
                     // wrap="off"
-                />
+                style={{}}/>
                 {(isMobile && !props.readOnlyCommand) && 
                     <button onClick={textOnEnter}>enter</button>
                 }

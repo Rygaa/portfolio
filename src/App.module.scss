@@ -1,23 +1,24 @@
-body {
-    background-color: black;
-}
-/* Rectangle 13 */
-
-
+body { background-color: black; }
+html { scroll-behavior: smooth; }
 
 .css-selector {
     background: linear-gradient(270deg, rgba(0, 209, 255, 0.15) 0%, rgba(0, 85, 251, 0.15) 55.42%);
-
     background-size: 400% 400%;
-
     -webkit-animation: AnimationName 8s ease infinite;
     -moz-animation: AnimationName 8s ease infinite;
     -o-animation: AnimationName 8s ease infinite;
     animation: AnimationName 8s ease infinite;
+    display: flex;
+    flex-direction: column;
 }
 
 .css-selector main {
-
+    display: flex;
+    flex-direction: column;
+    height: calc(var(--vh, 1vh) * 300);
+    width: 70%;
+    align-self: center;
+    justify-self: center;
 }
 
 
@@ -40,4 +41,54 @@ body {
     0%{background-position:0% 50%}
     50%{background-position:100% 50%}
     100%{background-position:0% 50%}
+}
+
+
+
+
+@media (max-width: 1350px){
+    html {
+        font-size: 15px;
+    }
+    .css-selector main {
+        width: 75%;
+    }
+}
+
+@media (max-width: 1200px){
+    html {
+        font-size: 14px;
+    }
+    .css-selector main {
+        width: 80%;
+    }
+}
+
+@media (max-width: 1050px){
+    html {
+        font-size: 13px;
+    }
+    .css-selector main {
+        width: 85%;
+    }
+
+}
+
+@media (max-width: 950px){
+    html {
+        font-size: 12px;
+    }
+}
+
+
+@media (max-width: 600px){
+    html {
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 400px){
+    html {
+        font-size: 10px;
+    }
 }
