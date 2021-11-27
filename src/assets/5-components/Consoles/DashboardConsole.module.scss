@@ -5,9 +5,11 @@
     grid-row: 2 / 4;
     margin-left: 2%;
     margin-top: 5%;
-
+    margin-bottom: 15vh;
     background: rgba(196, 196, 196, 0.1);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    display: grid;
+    grid-template-rows: min-content min-content auto;
 }
 
 .top-buttons {
@@ -16,8 +18,8 @@
     margin-bottom: 15px;
     > div {
         border-radius: 50%;
-        width: 15px;
-        height: 15px;
+        width: 0.938rem;
+        height: 0.938rem;
         margin-left: 15px;
 
         border: none;
@@ -37,9 +39,18 @@
 
 .commands-container::-webkit-scrollbar { display: none; }
 .commands-container {
+    // background-color: chartreuse;
     overflow-y: scroll;
-    height: 450px;
-    min-height: 450px;
+    height: 100%;
+    // height: 450px;
+    // min-height: 450px;
+}
+
+
+@media (max-width: 1200px) {
+    .console {
+    }
+
 }
 
 
@@ -48,35 +59,61 @@
 
 
 
+// @media (max-width: 1000px){
+//     .commands-container {
+//         overflow-y: scroll;
+//         height: 60%;
+//         min-height: 250px;
+//     }
+//     .console {
+//         grid-column: 1 / 2;
+//         grid-row: 3 / 4;
+//         margin: 0;
+//         margin-top: 2%;
+//     }
+// }
 
-
-
-@media (max-width: 1000px){
-    .commands-container {
-        overflow-y: scroll;
-        height: 60%;
-        min-height: 250px;
-    }
+@media (min-height: 1100px){
     .console {
         grid-column: 1 / 2;
         grid-row: 3 / 4;
         margin: 0;
-        margin-top: 2%;
+        margin-top: 3vh;
+        margin-bottom: 3vh;
+    }
+    .commands-container {
+        height: 100%;
+    }
+    .top-buttons {
     }
 }
 
-
-
-@media (max-width: 480px){
+@media (max-width: 800px){
     .console {
         grid-column: 1 / 2;
         grid-row: 3 / 4;
         margin: 0;
-        margin-top: 5%;
+        margin-top: 3vh;
+        margin-bottom: 3vh;
+
     }
     .commands-container {
-        overflow-y: scroll;
-        height: 60%;
-        min-height: 150px;
+        height: 100%;
+    }
+    .top-buttons {
     }
 }
+
+// @media (max-width: 480px){
+//     .console {
+//         grid-column: 1 / 2;
+//         grid-row: 3 / 4;
+//         margin: 0;
+//         margin-top: 5%;
+//     }
+//     .commands-container {
+//         overflow-y: scroll;
+//         height: 60%;
+//         min-height: 150px;
+//     }
+// }

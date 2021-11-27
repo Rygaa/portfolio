@@ -4,7 +4,7 @@
     display: grid;
     grid-template-rows: min-content min-content min-content;
     min-height: calc(var(--vh, 1vh) * 100);
-    background-color: rgba(green, 20%);
+    // background-color: rgba(green, 20%);
     align-content: center;
 }
 
@@ -13,7 +13,8 @@
     flex-direction: column;
     align-content: center;
     align-items: center;
-    margin-bottom: 8vh;
+    // margin-bottom: 8vh;
+    margin-bottom: 4vh;
 
     > p:nth-child(1) {
         @include lucudiaConsole-normal-normal-13px-green;
@@ -33,22 +34,27 @@
     display: grid;
     grid-template-columns: min-content auto;
     justify-content: center;
-    height: 25rem;
-    // margin-top: 6rem;
-
+    // margin-left: 10%;
+    height: 35rem;
+    height: 30rem;
+    // background-color: rgba(red, 15%);
 }
 
 .project-container > div:nth-child(2) {
     background-color: rgba(#FFFFFF, 7%);
-    height: 25rem;
+    height: 30rem;
+    // height: 35rem;
     display: grid;
     grid-template-columns: 90% 10%;
     align-items: center;
+    // min-width: 45rem;
+
 }
 
 .project-container > div:nth-child(2) > div:nth-child(1) {
-    height: 25rem;
-    background-color: rgba(green, 20%);
+    // height: 35rem;
+    height: 30rem;
+    // background-color: rgba(green, 20%);
     display: flex;
     align-items: center;
     img {
@@ -59,8 +65,9 @@
 }
 
 .project-container > div:nth-child(2) > div:nth-child(2) {
-    background-color: rgba(red, 20%);
-    height: 25rem;
+    // background-color: rgba(red, 20%);
+    // height: 35rem;
+    height: 30rem;
     display: flex;
     align-items: center;
     img {
@@ -75,26 +82,77 @@
 .projects-switch {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    width: 10%;
+    width: 10rem;
     justify-self: center;
-    margin-top: 5rem;
+    // margin-top: 5rem;
+    margin-top: 5vh;
     // margin-bottom: 3.5rem;
 
     > button {
-        width: 15px;
-        height: 15px;
+        width: 0.938rem;
+        height: 0.938rem;
         margin: 0;
         padding: 0;
         border-radius: 5rem;
-
     }
-    > button:nth-child(1) { background-color: #24FF00; }
-    > button:nth-child(2) { background-color: rgba(#FFFFFF, 7%); }
-    > button:nth-child(3) { background-color: rgba(#FFFFFF, 7%); }
+    // > button:nth-child(1) { background-color: #24FF00; }
+    // > button:nth-child(2) { background-color: rgba(#FFFFFF, 7%); }
+    // > button:nth-child(3) { background-color: rgba(#FFFFFF, 7%); }
 }
 
+.switch-on { background-color: #24FF00; }
+.switch-off { background-color: rgba(#FFFFFF, 7%); }
 
 
+
+
+@media (max-width: 800px){
+    .project-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: min-content min-content;
+        height: unset;
+        justify-items: center;
+        margin-left: unset;
+
+    }
+
+    .project-container > div:nth-child(2) {
+        grid-row: 1/ 2;
+        background-color: rgba(#FFFFFF, 7%);
+        width: 100%;
+        display: grid;
+        grid-template-columns: 90% 10%;
+        align-items: center;
+    }
+
+    .project-container > div:nth-child(2) > div:nth-child(1) {
+
+        // background-color: rgba(green, 20%);
+        display: flex;
+        align-items: center;
+        img {
+            width: 100%;
+            object-fit: contain;
+            max-height: 100%;
+        }
+    }
+
+    .project-container > div:nth-child(2) > div:nth-child(2) {
+        // background-color: rgba(red, 20%);
+
+        display: flex;
+        align-items: center;
+        img {
+            width: 100%;
+            object-fit: contain;
+        }
+    }
+    .title-container {
+        margin-bottom: 1vh;
+    }
+
+
+}
 
 
 

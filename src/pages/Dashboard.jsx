@@ -42,13 +42,13 @@ const Dashboard = (props) => {
             <div>
                 <p>And this is</p>
                 <p>My portfolio</p>
-                <p>I am passionate about computer science universe, <br></br> especially about software engine bubbles and has been in it <br></br> for more than 2 years.</p>
+                <p>I am passionate about computer science universe, especially about software engine bubbles and has been in it for more than 2 years.</p>
                 <ul>
                     <li>React.js</li>
                     <li>Node.js</li>
                     <li>Electron.js</li>
                 </ul>
-                <p>challenges are never a burden for me.In fact, I am always <br></br> ready to accept new one</p>
+                <p>challenges are never a burden for me.In fact, I am always ready to accept new one</p>
             </div>
             <div className={classes['div-nav-button-container']} onClick={buttonOnClick}>
                 <img src={projectsIMG} />

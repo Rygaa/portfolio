@@ -13,12 +13,11 @@ html { scroll-behavior: smooth; }
 }
 
 .css-selector main {
-    display: flex;
-    flex-direction: column;
-    height: calc(var(--vh, 1vh) * 300);
-    width: 70%;
-    align-self: center;
-    justify-self: center;
+    display: grid;
+    grid-template-rows: 100vh 100vh 100vh;
+    grid-row-gap: 10vh;
+    margin-top: 10vh;
+    height: calc(var(--vh, 1vh) * 330);
 }
 
 
@@ -47,48 +46,25 @@ html { scroll-behavior: smooth; }
 
 
 @media (max-width: 1350px){
-    html {
-        font-size: 15px;
-    }
-    .css-selector main {
-        width: 75%;
-    }
+    html { font-size: 15px; }
 }
 
 @media (max-width: 1200px){
-    html {
-        font-size: 14px;
-    }
-    .css-selector main {
-        width: 80%;
-    }
+    html { font-size: 14px; }
 }
 
 @media (max-width: 1050px){
-    html {
-        font-size: 13px;
-    }
-    .css-selector main {
-        width: 85%;
-    }
-
+    html { font-size: 13px; }
 }
 
 @media (max-width: 950px){
-    html {
-        font-size: 12px;
-    }
+    html { font-size: 12px; }
 }
 
-
 @media (max-width: 600px){
-    html {
-        font-size: 11px;
-    }
+    html { font-size: 11px; }
 }
 
 @media (max-width: 400px){
-    html {
-        font-size: 10px;
-    }
+    html { font-size: 10px; }
 }

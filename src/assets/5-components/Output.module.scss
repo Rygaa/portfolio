@@ -5,9 +5,10 @@
 .Output {
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
     margin-top: 1%;
     color: #24FF00;
+    height: 2rem;
+    align-items: flex-start;
 }
 
 .arrow {
@@ -15,9 +16,8 @@
     padding: 0;
     margin-left: 20px;
     margin-right: 10px;
-    margin-bottom: 5px;
+    // margin-bottom: 5px;
     @include lucudiaConsole-normal-normal-13px-green;
- 
 }
 
 .text {
@@ -27,8 +27,9 @@
     background-color: transparent;
     border: none;
     width: 80%;
-    margin-bottom: 5px;
+    // margin-bottom: 5px;
     resize: none;
+    
 }
 
 .text:focus {
@@ -40,9 +41,9 @@ button {
     @include lucudiaConsole-normal-normal-13px-green;
     background-color: transparent;
     border: none;
-    font-size: 8px;
-    padding: .3rem 1rem;
+    font-size: 1rem;
+    // padding: .3rem 1rem;
     // max-height: 10%;
     background-color: rgba(1, 1, 1, 0.3);
-    margin-right: 5%;
+    // margin-right: 5%;
 }
