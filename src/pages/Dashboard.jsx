@@ -21,15 +21,14 @@ const Dashboard = (props) => {
         dispatch(pagesActions.setDashboardRef(myRef.current));
     }, [myRef])
     const cmd = [
-        'Hello World!!!', 
-        'This portfolio is made ',
-        'Credits: ',
-        'Nas',
-        'Flaticon',
+        'Welcome to my portfolio', 
+        'This portfolio is built using react library and designed with figma',
+        'Thanks to NasYkh for let me inspire from his website and to Flaticon with their huge free icon use',
     ]
     const buttonOnClick = (e) => {
         projectsRef.scrollIntoView()
     }
+    
     return (
         <section ref={myRef} className={classes['dashboard']}>
             <div>
@@ -42,13 +41,19 @@ const Dashboard = (props) => {
             <div>
                 <p>And this is</p>
                 <p>My portfolio</p>
-                <p>I am passionate about computer science universe, especially about software engine bubbles and has been in it for more than 2 years.</p>
+                <p>I full-stack web-developer. I was introduced to the software development in the game-dev industry. The desire of
+                    learning pushed me to learn web-dev
+                    <br />
+                    <br /> Skills:
+                </p>
                 <ul>
-                    <li>React.js</li>
+                    <li>Javascript</li>
                     <li>Node.js</li>
-                    <li>Electron.js</li>
+                    <li>React</li>
+                    <li>Figma</li>
+                    <li>MongoDB</li>
                 </ul>
-                <p>challenges are never a burden for me.In fact, I am always ready to accept new one</p>
+                <p>I am also familiar with react-native, Electron.js, C++ and Java.</p>
             </div>
             <div className={classes['div-nav-button-container']} onClick={buttonOnClick}>
                 <img src={projectsIMG} />
@@ -60,3 +65,10 @@ const Dashboard = (props) => {
 }
 
 export default Dashboard
+//<p>challenges are never a burden for me.In fact, I am always ready to accept new one</p>
+//
+//          <p>I am passionate about computer science universe, 
+    //                 especially about software engine bubbles and has been in it for more than 2 years.
+    //                 < br />
+    // <br /> Skills:
+    //             </p >

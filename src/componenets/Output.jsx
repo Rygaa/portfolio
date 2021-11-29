@@ -31,7 +31,7 @@ const Output = forwardRef((props, ref) => {
             const interval = setInterval(() => {
                 if (!props.pause)
                     setCounter(counter => counter + 1)
-            }, 85)
+            }, 60)
             setTimer(interval);
         }
     }, [props.pause])
