@@ -13,18 +13,28 @@ import { useEffect, useRef, useState } from "react";
 const hanasu = {
     picture: hanasuImage, 
     cmd: [
-        'Project Hanasu',
-        'Nodejs',
-        'Nodejs',
+        'Name: Hanasu',
+        'Backend: Nodejs',
+        'Frontend: React',
+        'Designed: Figma',
+        'Database: MongoDB',
+        'npms: socket.io \n\xa0\xa0\xa0\xa0\xa0 react-redux' + '\n\xa0\xa0\xa0\xa0\xa0\xa0' + 
+        'axios \n\xa0\xa0\xa0\xa0\xa0 react-redux' 
+
     ]
 }
 
 const tutorat = {
     picture: MedTutoImage,
     cmd: [
-        'Project tutorat',
-        'Nodejs',
-        'Nodejs',
+        'Name: Med-Tutorat',
+        'Backend: Nodejs',
+        'Frontend: React',
+        'Designed: Figma',
+        'Database: MongoDB',
+        'npms: socket.io \n\xa0\xa0\xa0\xa0\xa0 react-redux' + '\n\xa0\xa0\xa0\xa0\xa0\xa0' +
+        'react-toastify \n\xa0\xa0\xa0\xa0\xa0 react-tabs' + '\n\xa0\xa0\xa0\xa0\xa0\xa0' +
+        'axios \n\xa0\xa0\xa0\xa0\xa0 radix-ui'
     ]
 }
 
@@ -41,10 +51,9 @@ const Projects = (props) => {
     const dispatch = useDispatch();
     const myRef = useRef();
     const [imageIndex, setImageIndex] = useState(0);
-    const pictures = [hanasu, tutorat, maktaba]
+    const pictures = [hanasu, tutorat]
     const [switches, setSwitches] = useState([
         'switch-on',
-        'switch-off',
         'switch-off',
     ])
 
@@ -104,7 +113,6 @@ const Projects = (props) => {
             <div className={classes['projects-switch']}>
                 <button className={classes[switches[0]]} onClick={testttt}></button>
                 <button className={classes[switches[1]]} onClick={testttt}></button>
-                <button className={classes[switches[2]]} onClick={testttt}></button>
             </div>
 
         </section>
