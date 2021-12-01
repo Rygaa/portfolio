@@ -23,7 +23,7 @@ const Dashboard = (props) => {
     const cmd = [
         'Welcome to my portfolio', 
         'This portfolio is built using react library and designed with figma',
-        'Thanks to NasYkh for let me inspire from his website and to Flaticon with their huge free icon use',
+        'Thanks to NasYkh for allowing me to be inspire from his website and to Flaticon for their huge free icon use',
     ]
     const buttonOnClick = (e) => {
         projectsRef.scrollIntoView()
@@ -41,7 +41,7 @@ const Dashboard = (props) => {
             <div>
                 <p>And this is</p>
                 <p>My portfolio</p>
-                <p>I full-stack web-developer. I was introduced to the software development in the game-dev industry. The desire of
+                <p>I am a full-stack web-developer. I was introduced to the software development in the game-dev industry. The desire of
                     learning pushed me to learn web-dev
                     <br />
                     <br /> Skills:

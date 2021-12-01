@@ -18,7 +18,7 @@ const Contact = (props) => {
     return (
         <section ref={myRef} className={classes['contact']}>
             <p>Contact us</p>
-            <p>{'>'} Use the console to send an email</p>
+            <p>{'>'} Follow the step in the console to send an email</p>
             <ContactConsole
                 cmd={cmd}
                 // cmd={['Enter your email: ', 'Enter your name: ', 'Enter your message: ']} 

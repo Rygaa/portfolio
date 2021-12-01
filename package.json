@@ -11,13 +11,17 @@
     "emailjs": "^3.6.0",
     "express": "^4.17.1",
     "react": "^17.0.2",
+    "react-animation": "^1.2.2",
+    "react-animations": "^1.0.0",
     "react-device-detect": "^2.0.1",
     "react-dom": "^17.0.2",
     "react-redux": "^7.2.5",
     "react-scripts": "4.0.3",
     "react-timer-hook": "^3.0.5",
     "react-toast-notifications": "^2.5.1",
+    "react-transition-group": "^4.4.2",
     "sass": "^1.42.1",
+    "styled-components": "^5.3.3",
     "web-vitals": "^1.0.1"
   },
   "scripts": {

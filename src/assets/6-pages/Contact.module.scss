@@ -22,7 +22,7 @@
 .contact > p:nth-child(2) {
     @include lucudiaConsole-normal-normal-13px-green;
     color: white;
-    font-size: 1.25rem;
+    font-size: 1.2rem;
     margin-bottom: 4%;
 }
 
@@ -43,19 +43,9 @@
 // }
 
 
-// @media (max-width: 480px){
-//     .contact {
-//         margin-top: 35%;
-//     }
+@media (max-width: 550px){
 
-//     .contact > p:nth-child(1) {
-//         margin-bottom: .5%;
-//     }
 
-//     .contact > p:nth-child(2) {
-//         margin-bottom: 4%;
-//     }
-
-// }
+}
 
 

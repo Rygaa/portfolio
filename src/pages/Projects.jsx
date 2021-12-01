@@ -8,6 +8,9 @@ import ProjectsConsole from "../componenets/Consoles/ProjectsConsole";
 import { pagesActions } from "../store/pages-slice";
 import { useDispatch } from "react-redux";
 import { useEffect, useRef, useState } from "react";
+import { AnimateOnChange } from 'react-animation'
+
+
 
 
 const hanasu = {
@@ -47,10 +50,25 @@ const maktaba = {
     ]
 }
 
+
+const duration = 300;
+
+const defaultStyle = {
+    transition: `opacity ${duration}ms ease-in-out`,
+    opacity: 0,
+}
+
+const transitionStyles = {
+    entering: { opacity: 1 },
+    entered: { opacity: 1 },
+    exiting: { opacity: 0 },
+    exited: { opacity: 0 },
+};
+
 const Projects = (props) => {
     const dispatch = useDispatch();
     const myRef = useRef();
-    const [imageIndex, setImageIndex] = useState(0);
+    const [imageIndex, setImageIndex] = useState(1);
     const pictures = [hanasu, tutorat]
     const [switches, setSwitches] = useState([
         'switch-on',
@@ -75,22 +93,21 @@ const Projects = (props) => {
         }
 
         setSwitches(switchesArr);
+        
     }
 
     const print = <ProjectsConsole cmd={cmd} status='projects'></ProjectsConsole>
-
-
     useEffect(() => {
-        // console.log(cmd);
-        // console.log(print);
-        // console.log(pictures[0].cmd);
-        console.log(switches);
-    }, [switches])
+
+    }, [])
 
 
     useEffect(() => {
         dispatch(pagesActions.setProjectsRef(myRef.current));
+        
     }, [myRef])
+
+  
 
     const testttt = () => {
         rightArrowOnClick();
@@ -105,10 +122,11 @@ const Projects = (props) => {
             </div>
             <div className={classes['project-container']}>
                 {print}
-                <div>
-                    <div><img src={pictures[imageIndex].picture}></img></div>
+                <div className={classes['project']}>
+                    <div><AnimateOnChange durationOut="500"><img src={pictures[imageIndex].picture}></img></AnimateOnChange></div>
                     <div onClick={rightArrowOnClick}><img src={arrow}></img></div>
                 </div>
+                
             </div>
             <div className={classes['projects-switch']}>
                 <button className={classes[switches[0]]} onClick={testttt}></button>
