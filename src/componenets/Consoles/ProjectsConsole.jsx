@@ -76,7 +76,6 @@ const DashboardConsole = (props) => {
             key={output.key}
             createNewInput={output.createNewInput}
             txt={output.txt}
-            focus={output.focus}
             generateInputFromCMD={output.generateInputFromCMD}
             readOnlyCommand={output.readOnlyCommand}
         />

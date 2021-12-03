@@ -11,6 +11,8 @@ const Contact = (props) => {
         dispatch(pagesActions.setContactRef(myRef.current));
     }, [myRef])
     const cmd = [
+        'The console will ask you to enter your email, name and message.' +
+        'The SEND button will appear when you enter your message. (Click enter to start)',
         'Enter your email: ',
         'Enter your name: ',
         'Enter your message: ',

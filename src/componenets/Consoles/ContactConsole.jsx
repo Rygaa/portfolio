@@ -20,6 +20,7 @@ const ContactConsole = (props) => {
     }, [])
     const scrollEventFunction = (e) => {
         isInViewport(myRef.current) ? setPause(false) : setPause(true);
+        console.log(isInViewport(myRef.current));
     }
     function isInViewport(element) {
         const rect = element.getBoundingClientRect();
@@ -30,7 +31,9 @@ const ContactConsole = (props) => {
             rect.right <= (window.innerWidth || document.documentElement.clientWidth)
         );
     }
-
+    useEffect(() => {
+        console.log(pause);
+    }, [pause])
     const readCommand = (command, value) => {
         switch(command) {
             case 'Enter your email: ':
@@ -111,19 +114,37 @@ const ContactConsole = (props) => {
     //         next.focus()
     //     }
     // };
-    const outputsList = outputs.map((output, index) => (
+    let outputsList = outputs.map((output, index) => (
         <Output
             ref={el => inputRef.current[index] = el}
             key={output.key}
             pause={pause}
-            generateInputFromCMD = {generateInputFromCMD}
+            generateInputFromCMD={generateInputFromCMD}
             generateInputFromARG={generateInputFromARG}
             txt={output.txt}
-            focus={output.focus}
             readCommand={readCommand}
             readOnlyCommand={output.readOnlyCommand}
         />
     ));
+    // useEffect(() => {
+
+    // })
+    // if (pause) {
+    //     outputsList = outputs.map((output, index) => (
+    //         <Output
+    //             ref={el => inputRef.current[index] = el}
+    //             key={output.key}
+    //             pause={pause}
+    //             generateInputFromCMD={generateInputFromCMD}
+    //             generateInputFromARG={generateInputFromARG}
+    //             txt={output.txt}
+    //             focus={!pause}
+    //             readCommand={readCommand}
+    //             readOnlyCommand={output.readOnlyCommand}
+    //         />
+    //     ));
+    // }
+
 
     const nextLineOnClick = (e) => {
         inputRef.current[outputsList.length - 1].textOnEnterFromParent(e);

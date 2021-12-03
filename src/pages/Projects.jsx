@@ -105,7 +105,7 @@ const Projects = (props) => {
             <section className={classes['projects']}>
                 <div className={classes['title-container']}>
                     <p>Projects</p>
-                    <p>{'>'} Use the console to switch between projects</p>
+                    <p>{'>'} Use the right arrow to switch between projects</p>
                 </div>
                 <div className={classes['project-container']}>
                     {print}

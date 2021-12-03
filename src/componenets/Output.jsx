@@ -18,7 +18,11 @@ const Output = forwardRef((props, ref) => {
     const [inputStatus, setInputStatus] = useState(false);
     const [isEmailValid, setIsEmailValid] = useState(false);
     const { addToast } = useToasts();
-
+    useEffect(() => {
+        myRef.current.focus({
+            preventScroll: true
+        })
+    }, [])
     // textarea scroll to last text
     const tx = document.getElementsByTagName("textarea");
     for (let i = 0; i < tx.length; i++) {
@@ -132,20 +136,29 @@ const Output = forwardRef((props, ref) => {
         }
     }
 
+    useEffect(() => {
+        if (!props.readOnlyCommand) {
+            console.log('props.pause:', props.pause);
+            if (!props.pause) {
+                textareaRef.current.focus()
+            }
+        }
+    }, [props.pause])
+
+    const textarea = <textarea ref={textareaRef}
+        className={classes['text']}
+        value={text}
+        disabled={inputStatus}
+        onChange={textOnChange}
+        onSubmit={textOnSubmit}
+        onKeyDown={textOnEnter}
+        onFocus={textOnFocus}
+        style={{}}
+    />
     return (
         <div className={classes['Output']} ref={myRef} id={'fdfsdf'}>
             <p className={classes['arrow']}>{'>'}</p>
-            <textarea ref={textareaRef}
-                className={classes['text']}
-                value={text}
-                disabled={inputStatus}
-                onChange={textOnChange}
-                onSubmit={textOnSubmit}
-                onKeyDown={textOnEnter}
-                autoFocus={props.focus}
-                onFocus={textOnFocus}
-                style={{}}
-            />
+            {textarea}
         </div>
 
     );
