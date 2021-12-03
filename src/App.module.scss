@@ -1,5 +1,5 @@
-body { background-color: black; }
-html { scroll-behavior: smooth; }
+body { background-color: black; height: 100%; }
+html { scroll-behavior: smooth; height: 100%; }
 body::-webkit-scrollbar {
     background-color: rgba(0, 166, 255, 0.579);
     width: 10px;
@@ -7,56 +7,16 @@ body::-webkit-scrollbar {
 body::-webkit-scrollbar-thumb {
     background-color:rgb(0, 32, 49);
 }
-
-.section-backgrounds {
-    // height: calc((var(--vh, 1vh) * 300));
-    height: 300vh;
-    width: 100%;
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    z-index: -1;
-
-    > div:nth-child(1) {
-        // background: linear-gradient(180deg, rgba(0, 224, 255, 0.1) 0%, rgba(0, 224, 255, 0.019) 100%);
-          background: rgba(0, 224, 255, 0.1);
-
-        // background-color: red;
-        height: 100%;
-    }
-    > div:nth-child(2) {
-         background: rgba(0, 224, 255, 0.05);
-        // background-color: violet;
-        height: 100%;
-    }
-    > div:nth-child(3) {
-          background: rgba(0, 224, 255, 0.1);
-
-        // background-color: green;
-        height: 100%;
-    }
-
-}
-.section-background-01 {
-    height: 100vh;
-    width: 100%;
-}
-.section-background-02 {
-    height: 100vh;
-    width: 100%;
-    position: fixed;
-    top: 100vh;
-}
-.section-background-03 {
-    height: 100vh;
-    width: 100%;
-    position: fixed;
-    top: 200vh;
+html {
+    user-drag: none;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
 }
 
-
-
-.css-selector {
+.moving-bg {
     background: linear-gradient(270deg, rgba(0, 209, 255, 0.15) 0%, rgba(0, 85, 251, 0.15) 55.42%);
     background-size: 400% 400%;
     -webkit-animation: AnimationName 8s ease infinite;
@@ -65,13 +25,36 @@ body::-webkit-scrollbar-thumb {
     animation: AnimationName 8s ease infinite;
     display: flex;
     flex-direction: column;
+
 }
 
-.css-selector main {
-    display: grid;
-    grid-template-rows: 100vh 100vh 100vh;
-    // height: calc(var(--vh, 1vh) * 300);
-    height: 300vh;
+
+.static-bg {
+    $time: 3s;
+    background: url('./ressources/vectors.png');
+    background-size: 100% 100%;
+   -webkit-animation: AnimationName $time ease infinite;
+    -moz-animation: AnimationName $time ease infinite;
+    -o-animation: AnimationName $time ease infinite;
+    animation: AnimationName $time ease infinite;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 800px) {
+    .static-bg {
+        $time: 30s;
+        -webkit-animation: AnimationName $time ease infinite;
+        -moz-animation: AnimationName $time ease infinite;
+        -o-animation: AnimationName $time ease infinite;
+        animation: AnimationName $time ease infinite;
+        background-size: cover;
+    }
+}
+
+.moving-bg main {
+    display: flex;
+    flex-direction: column;
 
 }
 

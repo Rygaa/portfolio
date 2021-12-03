@@ -6,10 +6,6 @@
     flex-direction: row;
     justify-content: end;
     grid-column: 2 / 3;
-
-    img {
-
-    }
 }
 
 .nav-open {
@@ -27,7 +23,6 @@
     flex-direction: row;
     justify-content: center;
     background: rgba(255, 255, 255, 0.07);
-    // background-color: rgb(0, 0, 0);
     border-radius: 5px;
     border: none;
     margin-right: 2.5%;
@@ -67,9 +62,3 @@
     }
 
 }
-
-
-
-@media (max-width: 480px){
-}
-

@@ -6,12 +6,30 @@ import { isMobile } from 'react-device-detect';
 
 
 const ContactConsole = (props) => {
+    const myRef = useRef();
 
     const [outputs, setOutputs] = useState([])
     const [email, setEmail] = useState('')
     const [name, setName] = useState('')
     const [message, setMessage] = useState('')
     const [isReadyToSend, setIsReadyToSend] = useState(false)
+    const [pause, setPause] = useState(false);
+    useEffect(() => {
+        window.addEventListener("scroll", scrollEventFunction);
+        isInViewport(myRef.current) ? setPause(false) : setPause(true);
+    }, [])
+    const scrollEventFunction = (e) => {
+        isInViewport(myRef.current) ? setPause(false) : setPause(true);
+    }
+    function isInViewport(element) {
+        const rect = element.getBoundingClientRect();
+        return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+    }
 
     const readCommand = (command, value) => {
         switch(command) {
@@ -97,6 +115,7 @@ const ContactConsole = (props) => {
         <Output
             ref={el => inputRef.current[index] = el}
             key={output.key}
+            pause={pause}
             generateInputFromCMD = {generateInputFromCMD}
             generateInputFromARG={generateInputFromARG}
             txt={output.txt}
@@ -111,7 +130,7 @@ const ContactConsole = (props) => {
     }
 
     return (
-        <div className={classes['console-contact']}>
+        <div ref={myRef} className={classes['console-contact']}>
             <div className={classes['top-buttons']}>
                 <div></div>
                 <div></div>

@@ -7,29 +7,22 @@
     flex-direction: row;
     margin-top: 1%;
     color: #24FF00;
-    height: 2rem;
     align-items: flex-start;
+    margin-bottom: .5rem;
 }
 
 .arrow {
-    margin: 0;
-    padding: 0;
+    @include lucudiaConsole-normal-normal-13px-green;
     margin-left: 20px;
     margin-right: 10px;
-    // margin-bottom: 5px;
-    @include lucudiaConsole-normal-normal-13px-green;
 }
 
 .text {
     @include lucudiaConsole-normal-normal-13px-green;
-    margin: 0;
-    padding: 0;
     background-color: transparent;
     border: none;
     width: 80%;
-    // margin-bottom: 5px;
     resize: none;
-    
 }
 
 .text:focus {
@@ -42,8 +35,5 @@ button {
     background-color: transparent;
     border: none;
     font-size: 1rem;
-    // padding: .3rem 1rem;
-    // max-height: 10%;
     background-color: rgba(1, 1, 1, 0.3);
-    // margin-right: 5%;
 }

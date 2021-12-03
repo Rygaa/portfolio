@@ -5,6 +5,9 @@
     font-size: 1.25rem;
     letter-spacing: 0.1em;
     color: #FFFFFF;
+    // color: rgba(255, 255, 255, 0.9);
+    margin: 0;
+    padding: 0;
 }
 
 @mixin roboto-normal-bold-50px-white {
@@ -14,6 +17,8 @@
     font-size: 3rem;
     letter-spacing: 0.1em;
     color: #FFFFFF;
+    margin: 0;
+    padding: 0;
 }
 
 @mixin roboto-normal-500-20px-white {
@@ -23,6 +28,10 @@
     font-size: 1.25rem;
     letter-spacing: 0.075em;
     color: rgba(255, 255, 255, 0.869);
+    color: rgba(255, 255, 255, 0.95);
+
+    margin: 0;
+    padding: 0;
 }
 
 @mixin lucudiaConsole-normal-normal-13px-green {
@@ -32,4 +41,6 @@
     font-size: 0.9375rem;
     letter-spacing: 0.075em;
     color: #24FF00;
+    margin: 0;
+    padding: 0;
 }

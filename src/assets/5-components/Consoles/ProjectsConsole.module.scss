@@ -5,9 +5,11 @@
     width: 20rem;
     height: 30rem;
     // height: 25rem;
-
+    min-height: 30rem;
     background: rgba(196, 196, 196, 0.1);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    display: grid;
+    grid-template-rows: min-content min-content auto min-content;
 }
 
 .top-buttons {
@@ -31,7 +33,6 @@
     height: 1.5px;
     width: 100%;
     margin-bottom: 3%;
-
     background-color: rgba(255, 255, 255, 0.04);
 }
 
@@ -39,7 +40,6 @@
     overflow-y: scroll;
     display: flex;
     flex-direction: column;
-    height: 100%;
     // height: 60%;
     // min-height: 500px;
 }
@@ -52,24 +52,37 @@
     background-color: rgba(#062a00, 50%);
 }
 
+.buttons-container {
+    display: flex;
+    flex-direction: column;
+    a {
+        color: white;
+        text-decoration: none;
+        // background-color: rgba(#FFFFFF, 7%);
+        @include lucudiaConsole-normal-normal-13px-green;
+        padding: 3.5% 2.5rem;
+        text-align: center;
+        width: 50%;
+        align-self: center;
+        margin-top: 5%;
+        background-image: linear-gradient(to right, rgba(#FFFFFF, 7%), rgba(#FFFFFF, 15%), rgba(#FFFFFF, 7%));
+        border-radius: 5px;
+        // border: 1px solid rgba(0, 255, 68, 0.45);
+        border: 1px solid rgba(0, 229, 255, 0.45);
+        transition: 0.5s;
+        background-size: 200% auto;
+    }
+    a:hover {
+        background-position: right center; /* change the direction of the change here */
+        border: 1px solid rgba(0, 229, 255, 0.85);
+    }
+    a:active {
+        border: 1px solid rgba(0, 255, 47, 0.85);
 
-// @media (max-width: 1000px){
-//     .commands-container {
-//         overflow-y: scroll;
-//         height: 60%;
-//         min-height: 250px;
-//     }
-//     .console-projects {
-//         grid-column: 1 / 2;
-//         grid-row: 4 / 5;
-//         margin: 0%;
-//         justify-self: center;
-//         margin-top: 2.5%;
-//         align-self: flex-start;
-//     }
+    }
+    margin-bottom: 5%;
+}
 
-
-// }
 
 @media (max-width: 800px){
     .console-projects {
@@ -78,16 +91,26 @@
         margin-top: 2.5%;
 
     }
-        .commands-container {
+    .commands-container {
         overflow-y: scroll;
-        height: 60%;
-        min-height: 180px;
+        // height: 60%;
+        height: 180px;
+        max-height: 180px;
     }
     .console-projects {
         grid-column: 1 / 2;
         grid-row: 4 / 5;
         height: 95%;
     }
+    .buttons-container {
+        a {
+            padding: 2% 1rem;
+            width: 50%;
+            margin-top: 2.5%;
+        }
+        margin-bottom: 2.5%;
+    }
+
 }
 
 @media (max-width: 480px){

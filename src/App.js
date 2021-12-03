@@ -29,19 +29,19 @@ function App() {
   return (
     <ToastProvider components={{ Toast: MyCustomToast }} autoDismissTimeout={'3000'} placement={'top-left'}>
 
-      <section className={classes['css-selector']}>
-        <section className={classes['section-backgrounds']}>
-          <div></div>
-          <div></div>
-          <div></div>
+      <section className={classes['moving-bg']}>
+        <section className={classes['static-bg']}>
+          <Header></Header>
+          <main>
+
+            <Dashboard></Dashboard>
+            <Projects></Projects>
+            <Contact></Contact>
+          </main>
         </section>
-        <Header></Header>
-        <main>
-          <Dashboard></Dashboard>
-          <Projects></Projects>
-          <Contact></Contact>
-        </main>
+
       </section>
+
     </ToastProvider>
 
       

@@ -87,8 +87,8 @@ const Output = forwardRef((props, ref) => {
             setInputStatus(true);
 
             props.readCommand(key, value);
-            if (key == 'Enter your message: ' || key == 'Continue your message: ') {
-                props.generateInputFromARG(false, true, 'Continue your message: ');
+            if (key == 'Enter your message: ' || key == 'Add more to your message (facultatif): ') {
+                props.generateInputFromARG(false, true, 'Add more to your message (facultatif): ');
             } else {
                 props.generateInputFromCMD(false, true);
             }
@@ -122,8 +122,9 @@ const Output = forwardRef((props, ref) => {
             setInputStatus(true);
 
             props.readCommand(key, value);
-            if (key == 'Enter your message: ' || key == 'Continue your message: ') {
-                props.generateInputFromARG(false, true, 'Continue your message: ');
+            if (key == 'Enter your message: ' || key == 'Add more to your message (facultatif): ') {
+                props.generateInputFromARG(false, true, 'Add more to your message (facultatif): ');
+
 
             } else {
                 props.generateInputFromCMD(false, true);

@@ -16,16 +16,19 @@ const Contact = (props) => {
         'Enter your message: ',
     ]
     return (
-        <section ref={myRef} className={classes['contact']}>
-            <p>Contact us</p>
-            <p>{'>'} Follow the step in the console to send an email</p>
-            <ContactConsole
-                cmd={cmd}
-                // cmd={['Enter your email: ', 'Enter your name: ', 'Enter your message: ']} 
-                status="contact"
+        <section ref={myRef} className={classes['background']}>
+            <section className={classes['contact']}>
+                <p>Contact us</p>
+                <p>{'>'} Follow the step in the console to send an email</p>
+                <ContactConsole
+                    cmd={cmd}
+                    // cmd={['Enter your email: ', 'Enter your name: ', 'Enter your message: ']} 
+                    status="contact"
                 >
-            </ContactConsole>
+                </ContactConsole>
+            </section>
         </section>
+        
     );
 }
 

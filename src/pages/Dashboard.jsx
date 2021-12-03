@@ -30,37 +30,40 @@ const Dashboard = (props) => {
     }
     
     return (
-        <section ref={myRef} className={classes['dashboard']}>
-            <div>
-                <img src={handWaving}></img>
+        <section ref={myRef} className={classes['background']}>
+            <section className={classes['dashboard']}>
                 <div>
-                    <p>Hello, I am</p>
-                    <p>Aissa</p>
+                    <img src={handWaving}></img>
+                    <div>
+                        <p>Hello, I am</p>
+                        <p>Aissa</p>
+                    </div>
                 </div>
-            </div>
-            <div>
-                <p>And this is</p>
-                <p>My portfolio</p>
-                <p>I am a full-stack web-developer. I was introduced to the software development in the game-dev industry. The desire of
-                    learning pushed me to learn web-dev
-                    <br />
-                    <br /> Skills:
-                </p>
-                <ul>
-                    <li>Javascript</li>
-                    <li>Node.js</li>
-                    <li>React</li>
-                    <li>Figma</li>
-                    <li>MongoDB</li>
-                </ul>
-                <p>I am also familiar with react-native, Electron.js, C++ and Java.</p>
-            </div>
-            <div className={classes['div-nav-button-container']} onClick={buttonOnClick}>
-                <img src={projectsIMG} />
-                <button>View projects</button>
-            </div>
-            <DashboardConsole cmd={cmd} status='dashboard'></DashboardConsole>
+                <div>
+                    <p>And this is</p>
+                    <p>My portfolio</p>
+                    <p>I am a full-stack web-developer. I was introduced to the software development in the game-dev industry. The desire of
+                        learning pushed me to learn web-dev
+                        <br />
+                        <br /> Skills:
+                    </p>
+                    <ul>
+                        <li>Javascript</li>
+                        <li>Node.js</li>
+                        <li>React</li>
+                        <li>Figma</li>
+                        <li>MongoDB</li>
+                    </ul>
+                    <p>I am also familiar with react-native, Electron.js, C++ and Java.</p>
+                </div>
+                <div className={classes['div-nav-button-container']} onClick={buttonOnClick}>
+                    <img src={projectsIMG} />
+                    <button>View projects</button>
+                </div>
+                <DashboardConsole cmd={cmd} status='dashboard'></DashboardConsole>
+            </section>
         </section>
+       
     );
 }
 

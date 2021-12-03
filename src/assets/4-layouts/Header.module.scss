@@ -1,46 +1,4 @@
-.header {
-    // background-color: rgba(1, 1, 1, 0.296);
-    // background-color: black;
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-
-}
-
-.logo{
-    width: 3.125em;
-    height: 3.125em;
-    margin-left: 1.5%;
-    margin-top: 1.5%;
-    position: absolute;
-}
+.header {}
 
 
-@media (max-width: 800px){
-    .header {
-        background-color: transparent;
-    }
-    .logo{
-        width: 3.125rem;
-        height: 3.125rem;
-        margin-left: 3%;
-        margin-top: 3%;
-    }
-}
-
-
-
-@media (max-width: 1000px){
-
-}
-
-
-
-@media (max-width: 480px){
-    .logo{
-        width: 3.125rem;
-        height: 3.125rem;
-        // margin-left: 6%;
-        // margin-top: 10%;
-    }
-}
 

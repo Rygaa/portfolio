@@ -90,7 +90,10 @@ const DashboardConsole = (props) => {
             </div>
             <div className={classes['line']}></div>
             <div className={classes['commands-container']}>{outputsList}</div>
-
+            <div className={classes['buttons-container']}>
+                <a href={props.github}>View Github</a>
+                <a href={props.website}>View Website</a>
+            </div>
         </div>
     );
 }
