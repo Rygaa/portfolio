@@ -41,7 +41,10 @@ const Output = forwardRef((props, ref) => {
     }, [props.pause])
 
     useEffect(() => {
+        console.log(textareaRef.current.disabled)
         if (counter == props.txt.length) {
+            textareaRef.current.disabled = false;
+            textareaRef.current.focus()
             clearInterval(timer)
             setTimer(null)
             if (props.readOnlyCommand)
@@ -136,19 +139,12 @@ const Output = forwardRef((props, ref) => {
         }
     }
 
-    useEffect(() => {
-        if (!props.readOnlyCommand) {
-            console.log('props.pause:', props.pause);
-            if (!props.pause) {
-                textareaRef.current.focus()
-            }
-        }
-    }, [props.pause])
+
 
     const textarea = <textarea ref={textareaRef}
         className={classes['text']}
         value={text}
-        disabled={inputStatus}
+        disabled={true}
         onChange={textOnChange}
         onSubmit={textOnSubmit}
         onKeyDown={textOnEnter}

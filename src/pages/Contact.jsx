@@ -12,7 +12,7 @@ const Contact = (props) => {
     }, [myRef])
     const cmd = [
         'The console will ask you to enter your email, name and message.' +
-        'The SEND button will appear when you enter your message. (Click enter to start)',
+        'The SEND button will appear when you enter your message. (Click enter/next line to start)',
         'Enter your email: ',
         'Enter your name: ',
         'Enter your message: ',
