@@ -153,6 +153,7 @@ const Output = forwardRef((props, ref) => {
         onSubmit={textOnSubmit}
         onKeyDown={textOnEnter}
         onFocus={textOnFocus}
+        spellcheck="false"
         style={{}}
     />
     return (
